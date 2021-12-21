@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+  <title>Fetch using MySQL and Node.js</title>
+</head>
+<body>
+    <div class="table-data">
+<h2>Display Data using Node.js & MySQL</h2>
+    <table border="1">
+        <tr>
+            <th>SNO.</th>
+            <th>student_id</th>
+            <th>name</th>
+            <th>course_name</th>
+            <th>phone</th>
+            <th>city</th>
+            <th>department_id</th>
+            <th>department_name</th>
+        </tr>
+        
+        <%
+        if(userData.length!=0){
+        var i=1;
+        userData.forEach(function(data){
+        %>
+        <tr>
+            <td><%=i; %></td>
+            <td><%=data.student_id %></td>
+            <td><%=data.name %></td>
+            <td><%=data.records %></td>
+            <td><%=data.phone %></td>
+            <td><%=data.city %></td>
+            <td><%=data.department_id %></td>
+            <td><%=data.department_name %></td>
+            
+            <button><a href="/course?id=<%=userData[0].student_id %>">Show Courses Opted</a></button>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+</body>
+</html>
