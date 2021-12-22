@@ -2,7 +2,7 @@
 Its a management system of a college in which students and there courses can be added.
 We can display the list of student with their opted courses.
 
-#Dependencies
+# Dependencies
 mysql
 express
 ejs
